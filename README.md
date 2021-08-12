@@ -1,5 +1,5 @@
 # ToDoList Room MVVM
-A ToDoList app. This app represents a simple To-Do List, which lists and creates, update and delete
+A ToDoList Android app. This app represents a simple To-Do List, which lists and creates, update and delete
 
 ### Pending List:
   - When list will be created status will be pending **OR**
