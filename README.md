@@ -1,6 +1,6 @@
 # ToDoList Room MVVM
 
-## Resourcess
+### This project uses:
 
 ViewModel
 
