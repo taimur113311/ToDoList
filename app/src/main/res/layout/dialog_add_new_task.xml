@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".newstructure.modules.eiar.view.DialogLoadConfirmation">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.todolist.ui.tasklist.viewmodel.DialogAddTaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_corner_dialog_bg"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <LinearLayout
+            android:id="@+id/llCross"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:onClick="@{(v) -> viewModel.onDialogDismissClicked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cross_dialog_icon"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@{viewModel.title}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llCross" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTaskTitle"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="@string/enter_task_title"
+            android:text="@={viewModel.etListTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTaskConent"
+            style="@style/ContentEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="@string/enter_task_content"
+            android:text="@={viewModel.etListContent}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etTaskTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{viewModel.error}"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_9sdp"
+            android:visibility="@{viewModel.error.toString().empty ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etTaskConent"
+            tools:text="" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/btn_blue_bg"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="@{(v) -> viewModel.onDialogContinueClicked(v)}"
+            android:text="@{viewModel.buttonText}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvError" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

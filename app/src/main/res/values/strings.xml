@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="allList">All List</string>
+    <string name="add_list">ADD LIST</string>
+    <string name="add_new_list">Add New List</string>
+    <string name="no_task">No Task</string>
+    <string name="Add">ADD</string>
+    <string name="noCompleteItem">Completed list appear here.\n Mark <font color='#01C6DB'>Pending List </font>task as completed then completed list appear.</string>
+    <string name="pedinglist">Pending list you add appear here.\n For Add list to click<font color='#01C6DB'> + </font> icon </string>
+    <string name="pending_list">Pending List</string>
+    <string name="completed_list">Completed List</string>
+    <string name="complete">Complete</string>
+    <string name="todo_list_string">ToDo-List</string>
+    <string name="poweredby">PoweredBy: Taimur Tanveer</string>
+    <string name="enter_list_title">Enter List Title</string>
+    <string name="enter_task_title">Enter Task Title</string>
+    <string name="enter_task_content">Enter Task Content</string>
+    <string name="start_new_task">Start creating a new task by tapping \'Add New Task\'</string>
+    <string name="add_new_task">Add New Task</string>
+    <string name="task_created_on">Task Created On:</string>
+    <string name="Edit">Edit</string>
+    <string name="duplicate">Duplicate</string>
+    <string name="edit_a_list">Edit a list</string>
+    <string name="edit_list">Edit List</string>
+    <string name="edit_a_task">Edit Task</string>
+    <string name="edit">Edit</string>
+
+</resources>
